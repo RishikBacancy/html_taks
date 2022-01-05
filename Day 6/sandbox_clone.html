@@ -1,1136 +1,1208 @@
 <html>
 
-    <head>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-        <style>
+    <style>
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+        }
 
-            
+        .container {
+            max-width: 1360px;
+        }
 
-        </style>
+        .owl-carousel {
+            height: 700px;
+        }
 
-    </head>
+        .owl-theme .item {
+            background-color: rgb(245, 248, 248);
+            min-height: 100%;
+            width: 550px;
+            margin-right: 15px;
+            float: left;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .owl-carousel {
+                height: 500px;
+            }
+
+            .owl-theme .item {
+                min-height: 100%;
+                width: 350px;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .owl-carousel {
+                height: 700px;
+            }
+
+            .owl-theme .item {
+                min-height: 100%;
+                width: 550px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .owl-carousel {
+                height: 500px;
+            }
+
+            .owl-theme .item {
+                min-height: 100%;
+                width: 350px;
+            }
+        }
+
+        .owl-nav span {
+            font-size: 44px;
+        }
+
+        #w-card-n {
+            background-color: #b4cfe0;
+            color: #308fca;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 10px;
+            height: 64px;
+            width: 64px;
+        }
+
+        #w-card-n span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 100%;
+        }
+
+        #accordion>div,
+        #accordion-2>div,
+        #headingOne,
+        #headingTwo,
+        #headingThree,
+        #headingOne-2,
+        #headingTwo-2,
+        #headingThree-2,
+        #headingFour-2 {
+            border: 0px;
+        }
+
+        #cmp-f-i {
+            background-color: lightgreen;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        #sol-dd-btn {
+            font-size: 13px;
+            color: skyblue;
+        }
+
+        .owl-nav {
+            padding-top: 40px;
+        }
+
+        .owl-prev span,
+        .owl-next span {
+            background-color: skyblue;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .owl-dots {
+            display: none;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+
+        #testimonial-grid div .card-body {
+            background-color: #ebebeb;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
 
 
-    <body>
-        
-        
+<body>
+
+
     <header class="navigation-wrap bg-white start-header start-style">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <nav class="navbar navbar-expand-lg navbar-light">
-              
-                <a class="navbar-brand" href="#" target="_blank"><img src="https://sandbox.elemisthemes.com/assets/img/logo-dark.png" alt=""></a>	
-                  
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                  
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto py-4 py-md-0">
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Demos</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else</a>
-                          <a class="dropdown-item" href="#">Another action</a>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+
+                        <a class="navbar-brand" href="#" target="_blank"><img
+                                src="https://sandbox.elemisthemes.com/assets/img/logo-dark.png" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Demos</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Blocks</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+
+                                            <a class="dropdown-item" href="#">Something else</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a href="#" class="btn btn-sm btn-primary rounded-pill">Contact</a>
+                                </li>
+                            </ul>
                         </div>
-                      </div>
-                    </li>
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
-                    </li>
-                      <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blocks</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentation</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          
-                          <a class="dropdown-item" href="#">Something else</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                      <a href="#" class="btn btn-sm btn-primary rounded-pill">Contact</a>
-                    </li>
-                  </ul>
-                </div>               
-              </nav>		
+                    </nav>
+                </div>
             </div>
-          </div>
         </div>
-      </header>   
-  
-      <section class="wrapper bg-white pt-5">
+    </header>
+
+    <section class="wrapper bg-white pt-5">
         <div class="container pt-5 text-center">
-          <div class="row align-items-center">
-            <div class="col-lg-7 order-lg-2">
-              <figure>
-                <img
-                  class="img-fluid"
-                  src="https://sandbox.elemisthemes.com/assets/img/illustrations/i21.png"
-                  srcset="
+            <div class="row align-items-center">
+                <div class="col-lg-7 order-lg-2">
+                    <figure>
+                        <img class="img-fluid" src="https://sandbox.elemisthemes.com/assets/img/illustrations/i21.png"
+                            srcset="
                     https://sandbox.elemisthemes.com/assets/img/illustrations/i21@2x.png 2x
-                  "
-                  alt=""
-                />
-              </figure>
-            </div>
-  
-            <div
-              class="
+                  " alt="" />
+                    </figure>
+                </div>
+
+                <div class="
                 col-md-10
                 offset-md-1 offset-lg-0
                 col-lg-5
                 text-left text-lg-start
-              "
-            >
-              <h1 class="display-4 mb-5 mx-md-n5 mx-lg-0 mt-7">
-                A digital agency <br class="d-md-none" />specializing on
-                <br class="d-md-none" /><span class="rotator-fade text-primary"
-                  ><span class="text-info" style="display: inline-block"
-                    >3D animation</span
-                  ></span
-                >
-              </h1>
-              <p class="lead fs-lg mb-7">
-                We are an award winning design agency that strongly believes in
-                the power of creative ideas.
-              </p>
-              <span
-                ><a class="btn btn-lg btn-primary rounded-pill me-2"
-                  >Get Started</a
-                ></span
-              >
+              ">
+                    <h1 class="display-4 mb-5 mx-md-n5 mx-lg-0 mt-7">
+                        A digital agency <br class="d-md-none" />specializing on
+                        <br class="d-md-none" /><span class="rotator-fade text-primary"><span class="text-info"
+                                style="display: inline-block">3D animation</span></span>
+                    </h1>
+                    <p class="lead fs-lg mb-7">
+                        We are an award winning design agency that strongly believes in
+                        the power of creative ideas.
+                    </p>
+                    <span><a class="btn btn-lg btn-primary rounded-pill me-2">Get Started</a></span>
+                </div>
             </div>
-          </div>
-  
-          <p class="text-center mb-8">
-            Trusted by over 2K+ clients across the world
-          </p>
-  
-  
-          <div class="my-5 row row-cols-2 row-cols-sm-4 row-cols-md-6 d-lg-flex align-items-center justify-content-center">
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c2.png"
-                alt=""
-              />
+
+            <p class="text-center mb-8">
+                Trusted by over 2K+ clients across the world
+            </p>
+
+
+            <div
+                class="my-5 row row-cols-2 row-cols-sm-4 row-cols-md-6 d-lg-flex align-items-center justify-content-center">
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c2.png" alt="" />
+                </div>
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c3.png" alt="" />
+                </div>
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c4.png" alt="" />
+                </div>
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c5.png" alt="" />
+                </div>
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c6.png" alt="" />
+                </div>
+                <div class="col">
+                    <img class="img-fluid" height="55px" width="110px"
+                        src="https://sandbox.elemisthemes.com/assets/img/brands/c7.png" alt="" />
+                </div>
             </div>
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c3.png"
-                alt=""
-              />
-            </div>
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c4.png"
-                alt=""
-              />
-            </div>
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c5.png"
-                alt=""
-              />
-            </div>
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c6.png"
-                alt=""
-              />
-            </div>
-            <div class="col">
-              <img
-                class="img-fluid"
-                height="55px"
-                width="110px"
-                src="https://sandbox.elemisthemes.com/assets/img/brands/c7.png"
-                alt=""
-              />
-            </div>
-          </div>
         </div>
-  
+
         <div class="overflow-hidden">
-          <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-              <path
-                fill="#f3fafe"
-                d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"
-              ></path>
-            </svg>
-          </div>
-        </div>
-      </section>
-      <section class="wrapper bg-gradient-primary py-5" style="background-color: #f3fafe;">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <h2 class="display-5 text-uppercase text-primary py-4">
-                What We Do?
-              </h2>
-              <h3 class="display-5 pb-5">
-                The service we offer is specifically designed to meet your needs.
-              </h3>
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="#f3fafe"
+                        d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z">
+                    </path>
+                </svg>
             </div>
-          </div>
-  
-          <div class="row text-center d-flex align-items-end">
-            <div class="col-lg-4">
-              <div class="px-md-15 px-lg-3">
-                <figure class="mb-6">
-                  <img
-                    class="img-fluid"
-                    src="https://sandbox.elemisthemes.com/assets/img/illustrations/i24.png"
-                    srcset="
+        </div>
+    </section>
+    <section class="wrapper bg-gradient-primary py-5" style="background-color: #f3fafe;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h2 class="display-5 text-uppercase text-primary py-4">
+                        What We Do?
+                    </h2>
+                    <h3 class="display-5 pb-5">
+                        The service we offer is specifically designed to meet your needs.
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row text-center d-flex align-items-end">
+                <div class="col-lg-4">
+                    <div class="px-md-15 px-lg-3">
+                        <figure class="mb-6">
+                            <img class="img-fluid"
+                                src="https://sandbox.elemisthemes.com/assets/img/illustrations/i24.png" srcset="
                       https://sandbox.elemisthemes.com/assets/img/illustrations/i24@2x.png 2x
-                    "
-                    alt=""
-                  />
-                </figure>
-                <h3>Web Design</h3>
-                <p class="mb-2">
-                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi
-                  porta gravida at eget. Fusce dapibus tellus.
-                </p>
-                <a href="#" class="more hover">Learn More</a>
-              </div>
-            </div>
-       
-            <div class="col-lg-4">
-              <div class="px-md-15 px-lg-3">
-                <figure class="mb-6">
-                  <img
-                    class="img-fluid"
-                    src="https://sandbox.elemisthemes.com/assets/img/illustrations/i19.png"
-                    srcset="
+                    " alt="" />
+                        </figure>
+                        <h3>Web Design</h3>
+                        <p class="mb-2">
+                            Nulla vitae elit libero, a pharetra augue. Donec id elit non mi
+                            porta gravida at eget. Fusce dapibus tellus.
+                        </p>
+                        <a href="#" class="more hover">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="px-md-15 px-lg-3">
+                        <figure class="mb-6">
+                            <img class="img-fluid"
+                                src="https://sandbox.elemisthemes.com/assets/img/illustrations/i19.png" srcset="
                       https://sandbox.elemisthemes.com/assets/img/illustrations/i19@2x.png 2x
-                    "
-                    alt=""
-                  />
-                </figure>
-                <h3>Graphic Design</h3>
-                <p class="mb-2">
-                  Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel
-                  augue laoreet. Sed posuere consectetur.
-                </p>
-                <a href="#" class="more hover">Learn More</a>
-              </div>
-            </div>
-       
-            <div class="col-lg-4">
-              <div class="px-lg-3">
-                <figure class="mb-6">
-                  <img
-                    class="img-fluid"
-                    src="https://sandbox.elemisthemes.com/assets/img/illustrations/i18.png"
-                    srcset="
+                    " alt="" />
+                        </figure>
+                        <h3>Graphic Design</h3>
+                        <p class="mb-2">
+                            Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel
+                            augue laoreet. Sed posuere consectetur.
+                        </p>
+                        <a href="#" class="more hover">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="px-lg-3">
+                        <figure class="mb-6">
+                            <img class="img-fluid"
+                                src="https://sandbox.elemisthemes.com/assets/img/illustrations/i18.png" srcset="
                       https://sandbox.elemisthemes.com/assets/img/illustrations/i18@2x.png 2x
-                    "
-                    alt=""
-                  />
-                </figure>
-                <h3>3D Animation</h3>
-                <p class="mb-2">
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Praesent commodo cursus magna scelerisque.
-                </p>
-                <a href="#" class="more hover">Learn More</a>
-              </div>
-            </div>     
-          </div>
+                    " alt="" />
+                        </figure>
+                        <h3>3D Animation</h3>
+                        <p class="mb-2">
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                            Praesent commodo cursus magna scelerisque.
+                        </p>
+                        <a href="#" class="more hover">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-  
-      <section class="wrapper bg-light py-5">
+    </section>
+
+    <section class="wrapper bg-light py-5">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-5 order-lg-2">
-              <div class="card shadow-lg my-4 mr-5">
-                <div class="card-body my-3 p-6">
-                  <div class="d-flex flex-row">
-                    <div>
-                      <span
-                        class="
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-2">
+                    <div class="card shadow-lg my-4 mr-5">
+                        <div class="card-body my-3 p-6">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <span class="
                           icon
                           btn btn-circle btn-lg 
                           disabled
                           me-4
-                        "
-                        id="w-card-n"
-                        ><span class="number">01</span></span
-                      >
+                        " id="w-card-n"><span class="number">01</span></span>
+                                </div>
+                                <div>
+                                    <h4 class="mb-1">Collect Ideas</h4>
+                                    <p class="mb-0">
+                                        Nulla vitae elit libero pharetra augue dapibus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                      <h4 class="mb-1">Collect Ideas</h4>
-                      <p class="mb-0">
-                        Nulla vitae elit libero pharetra augue dapibus.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="card shadow-lg my-4 ml-5">
-                <div class="card-body my-3">
-                  <div class="d-flex flex-row">
-                    <div>
-                      <span
-                        class="
+
+                    <div class="card shadow-lg my-4 ml-5">
+                        <div class="card-body my-3">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <span class="
                           icon
                           btn btn-circle btn-lg
                           disabled
                           me-4
-                        "
-                        id="w-card-n"
-                        ><span class="number">02</span></span
-                      >
+                        " id="w-card-n"><span class="number">02</span></span>
+                                </div>
+                                <div>
+                                    <h4 class="mb-1">Data Analysis</h4>
+                                    <p class="mb-0">
+                                        Vivamus sagittis lacus vel augue laoreet.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                      <h4 class="mb-1">Data Analysis</h4>
-                      <p class="mb-0">
-                        Vivamus sagittis lacus vel augue laoreet.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="card shadow-lg my-4 mx-3">
-                <div class="card-body my-3 p-6">
-                  <div class="d-flex flex-row">
-                    <div>
-                      <span
-                        class="
+
+                    <div class="card shadow-lg my-4 mx-3">
+                        <div class="card-body my-3 p-6">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <span class="
                           icon
                           btn btn-circle btn-lg
                           disabled
                           me-4
-                        "
-                        id="w-card-n"
-                        ><span class="number">03</span></span
-                      >
+                        " id="w-card-n"><span class="number">03</span></span>
+                                </div>
+                                <div>
+                                    <h4 class="mb-1">Finalize Product</h4>
+                                    <p class="mb-0">Cras mattis consectetur purus sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                      <h4 class="mb-1">Finalize Product</h4>
-                      <p class="mb-0">Cras mattis consectetur purus sit amet.</p>
-                    </div>
-                  </div>
                 </div>
-              </div>
+
+                <div class="col-lg-7">
+                    <h2 class="text-uppercase text-primary mb-3">Our Strategy</h2>
+                    <h3 class="display-4 mb-4">
+                        Here are 3 working steps to organize our projects.
+                    </h3>
+                    <p>
+                        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                        vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam
+                        id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus
+                        eget urna mollis.
+                    </p>
+                    <p class="mb-6">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum
+                        id ligula porta felis euismod semper. Aenean lacinia bibendum
+                        nulla sed consectetur.
+                    </p>
+                    <a href="#" class="btn btn-primary rounded-pill mb-0">Learn More</a>
+                </div>
             </div>
-       
-            <div class="col-lg-7">
-              <h2 class="text-uppercase text-primary mb-3">Our Strategy</h2>
-              <h3 class="display-4 mb-4">
-                Here are 3 working steps to organize our projects.
-              </h3>
-              <p>
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-                vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam
-                id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus
-                eget urna mollis.
-              </p>
-              <p class="mb-6">
-                Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum
-                id ligula porta felis euismod semper. Aenean lacinia bibendum
-                nulla sed consectetur.
-              </p>
-              <a href="#" class="btn btn-primary rounded-pill mb-0">Learn More</a>
-            </div>     
-          </div>
         </div>
-      </section>
-  
-      <section class="wrapper pt-5">
+    </section>
+
+    <section class="wrapper pt-5">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7">
-              <figure>
-                <img
-                  class="img-fluid"
-                  src="https://sandbox.elemisthemes.com/assets/img/illustrations/i22.png"
-                  srcset="
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <figure>
+                        <img class="img-fluid" src="https://sandbox.elemisthemes.com/assets/img/illustrations/i22.png"
+                            srcset="
                     https://sandbox.elemisthemes.com/assets/img/illustrations/i22@2x.png 2x
-                  "
-                  alt=""
-                />
-              </figure>
+                  " alt="" />
+                    </figure>
+                </div>
+
+                <div class="col-lg-5">
+                    <h2 class="text-uppercase text-primary mb-3">
+                        Why Choose Us?
+                    </h2>
+                    <h3 class="display-4 mb-7">
+                        We bring solutions to make life easier.
+                    </h3>
+
+                    <div id="accordion">
+                        <div class="card pt-4" id="sol-dd-1">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        Professional Design
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                                    condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    Cras mattis consectetur purus sit amet fermentum. Praesent
+                                    commodo cursus magna, vel.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="sol-dd-2">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Top-Notch Support
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                                    condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    Cras mattis consectetur purus sit amet fermentum. Praesent
+                                    commodo cursus magna, vel.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="sol-dd-3">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Header and Slider Options
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                                    condimentum nibh, ut fermentum massa justo sit amet risus.
+                                    Cras mattis consectetur purus sit amet fermentum. Praesent
+                                    commodo cursus magna, vel.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-       
-            <div class="col-lg-5">
-              <h2 class="text-uppercase text-primary mb-3">
-                Why Choose Us?
-              </h2>
-              <h3 class="display-4 mb-7">
-                We bring solutions to make life easier.
-              </h3>
-  
-              <div id="accordion">
-                <div class="card pt-4" id="sol-dd-1">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Professional Design
-                      </button>
-                    </h5>
-                  </div>
-  
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                      condimentum nibh, ut fermentum massa justo sit amet risus.
-                      Cras mattis consectetur purus sit amet fermentum. Praesent
-                      commodo cursus magna, vel.
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="card" id="sol-dd-2">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Top-Notch Support
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                      condimentum nibh, ut fermentum massa justo sit amet risus.
-                      Cras mattis consectetur purus sit amet fermentum. Praesent
-                      commodo cursus magna, vel.
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="sol-dd-3">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Header and Slider Options
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                      condimentum nibh, ut fermentum massa justo sit amet risus.
-                      Cras mattis consectetur purus sit amet fermentum. Praesent
-                      commodo cursus magna, vel.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-  
+
         <div class="overflow-hidden">
-          <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-              <path
-                fill="white"
-                d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"
-              ></path>
-            </svg>
-          </div>
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="white"
+                        d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z">
+                    </path>
+                </svg>
+            </div>
         </div>
-      </section>
-  
-      <section class="wrapper bg-white overflow-hidden">
+    </section>
+
+    <section class="wrapper bg-white overflow-hidden">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-4 text-center text-lg-start">
-              <h2 class="display-5 text-uppercase text-primary my-3">
-                Company Facts
-              </h2>
-              <h3 class="display-5 my-4">We are proud of our design team</h3>
-              <p class="mb-5">
-                Just sit back and relax while we take care of your business needs
-                for you.
-              </p>
-            </div>
-            <div class="col-lg-8 my-5">
-              <div
-                class="row align-items-center counter-wrapper text-center"
-              >
-                <div class="col-md-4">
-                  <div
-                    class="
-                      icon
-                      btn btn-circle btn-lg 
-                      disabled
-                      mb-4
-                    "
-                    id="cmp-f-i"
-                  >
-                    <span class="iconify" data-icon="uil:presentation-check"></span>
-                  </div>
-                  <h3 class="counter" style="visibility: visible">1000+</h3>
-                  <p>Completed Projects</p>
-                </div>
-           
-                <div class="col-md-4">
-                  <div
-                    class="
-                      icon
-                      btn btn-circle btn-lg 
-                      disabled
-                      mb-4
-                    "
-                    id="cmp-f-i"
-                  >
-                    <span class="iconify" data-icon="feather:user-check"></span>
-                  </div>
-                  <h3 class="counter" style="visibility: visible">50K+</h3>
-                  <p>Happy Customers</p>
-                </div>
-           
-                <div class="col-md-4">
-                  <div
-                    class="
-                      icon
-                      btn btn-circle btn-lg 
-                      disabled
-                      mb-4
-                    "
-                    id="cmp-f-i"
-                  >
-                    <span class="iconify" data-icon="bx:bx-trophy"></span>
-                  </div>
-                  <h3 class="counter" style="visibility: visible">20+</h3>
-                  <p>Awards Won</p>
-                </div>         
-              </div>
-            </div>
-          </div>
-          <div class="row grid-view my-5">
-            <div class="col-md-6 col-xl-3">
-              <div class="card shadow-lg">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle w-15 mb-4"
-                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te1.jpg"
-                    srcset="
-                      https://sandbox.elemisthemes.com/assets/img/avatars/te1@2x.jpg 2x
-                    "
-                    alt=""
-                  />
-                  <h4 class="mb-1">Coriss Ambady</h4>
-                  <div class="mb-2">Financial Analyst</div>
-                  <p class="mb-2">
-                    Fermentum massa justo sit amet risus morbi leo.
-                  </p>
-                  <nav class="nav social mb-0">
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
-                  </nav>
-                </div>
-              </div>
-            </div>
-       
-            <div class="col-md-6 col-xl-3">
-              <div class="card shadow-lg">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle w-15 mb-4"
-                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te2.jpg"
-                    srcset="
-                      https://sandbox.elemisthemes.com/assets/img/avatars/te2@2x.jpg 2x
-                    "
-                    alt=""
-                  />
-                  <h4 class="mb-1">Cory Zamora</h4>
-                  <div class="mb-2">Marketing Specialist</div>
-                  <p class="mb-2">
-                    Fermentum massa justo sit amet risus morbi leo.
-                  </p>
-                  <nav class="nav social mb-0">
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
-                  </nav>
-                </div>
-              </div>       
-            </div>
-       
-            <div class="col-md-6 col-xl-3">
-              <div class="card shadow-lg">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle w-15 mb-4"
-                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te3.jpg"
-                    srcset="
-                      https://sandbox.elemisthemes.com/assets/img/avatars/te3@2x.jpg 2x
-                    "
-                    alt=""
-                  />
-                  <h4 class="mb-1">Nikolas Brooten</h4>
-                  <div class="mb-2">Sales Manager</div>
-                  <p class="mb-2">
-                    Fermentum massa justo sit amet risus morbi leo.
-                  </p>
-                  <nav class="nav social mb-0">
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
-                  </nav>
-                </div>
-              </div>
-            </div>
-       
-            <div class="col-md-6 col-xl-3">
-              <div class="card shadow-lg">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle w-15 mb-4"
-                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te4.jpg"
-                    srcset="
-                      https://sandbox.elemisthemes.com/assets/img/avatars/te4@2x.jpg 2x
-                    "
-                    alt=""
-                  />
-                  <h4 class="mb-1">Jackie Sanders</h4>
-                  <div class="meta mb-2">Investment Planner</div>
-                  <p class="mb-2">
-                    Fermentum massa justo sit amet risus morbi leo.
-                  </p>
-                  <nav class="nav social mb-0">
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="row pt-5">
-            <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
-              <h2 class="fs-16 text-uppercase text-primary mb-3">
-                Latest Projects
-              </h2>
-              <h3 class="display-5 mb-5">
-                Check out some of our awesome projects with creative ideas and
-                great design.
-              </h3>
-            </div>
-          </div>
-  
-        <div class="owl-carousel owl-theme pb-5" >
-          <div class="item">
-            <figure class="rounded mb-5">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp1.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp1@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Cras Fermentum Sem</a>
-                    </h2>
-                    <div class="text-muted">Mobile Design</div>
-                </div>
-            </div>
-          </div>
-  
-  
-          <div class="item">        
-            <figure class="rounded mb-7">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp2.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp2@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Venenatis Euismod Vehicula</a>
-                    </h2>
-                    <div class="text-muted">Web Design</div>
-                </div>
-            </div>
-          </div>
-  
-          <div class="item">
-            <figure class="rounded mb-7">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp3.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp3@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Tortor Tellus Cursus</a>
-                    </h2>
-                    <div class="text-muted">Stationary</div>
-                </div>
-            </div>
-          </div>
-  
-            <div class="item">
-            <figure class="rounded mb-7">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp4.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp4@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Ridiculus Sem Parturient</a>
-                    </h2>
-                    <div class="text-muted">Web Application</div>
-                </div>
-            </div>
-            </div>
-  
-  
-            <div class="item">
-            <figure class="rounded mb-7">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp5.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp5@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Curcus Sollicitudin Adipiscing</a>
-                    </h2>
-                    <div class="text-muted">Web Design</div>
-                </div>
-            </div>
-            </div>
-  
-  
-            <div class="item">
-            <figure class="rounded mb-7">
-                <a href="#"
-                    ><img
-                    src="https://sandbox.elemisthemes.com/assets/img/photos/sp6.jpg"
-                    srcset="
-                        https://sandbox.elemisthemes.com/assets/img/photos/sp6@2x.jpg 2x
-                    "
-                    alt=""
-                /></a>
-            </figure>
-            <div
-            class="d-flex justify-content-center flex-column">
-                <div class="py-1">
-                    <h2 class="display-5">
-                    <a href="#" class="text-dark h5"
-                        >Venenatis Euismod Vehicula</a>
-                    </h2>
-                    <div class="text-muted">Stationary</div>
-                </div>
-            </div>
-            </div>
-        </div>
-  
-      </div>
-  
-         <div class="overflow-hidden pt-5">
-          <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-              <path
-                fill= "#f7fbfe"
-                d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"
-              ></path>
-            </svg>
-          </div>
-        </div> 
-      </section>
-      
-      <section class="wrapper pb-5" style="background-color: #f7fbfe;">
-        <div class="container">
-          <div class="row text-center">
-              <div class="col-lg-8 offset-lg-2">
-                  <h2 class="text-uppercase text-primary my-3">Happy Customers</h2>
-                  <h3 class="display-4 mb-5">Don't take our word for it. See what customers are saying about us.</h3>
-              </div>
-          </div>
-  
-          <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3" id="testimonial-grid">
-              <div class="col-4">          
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te1.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te1@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Coriss Ambady</h5>
-                                  <p class="mb-0">Financial Analyst</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-  
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>”Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te2.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te2@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Cory Zamora</h5>
-                                  <p class="mb-0">Marketing Specialist</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-              </div>
-              <div class="col-4">          
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>“Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque penatibus.  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Donec sed odio dui consectetur adipiscing elit.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te3.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te3@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Nikolas Brooten</h5>
-                                  <p class="mb-0">Sales Manager</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-  
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>“Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero condimentum ac laoreet vitae.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te4.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te4@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Coriss Ambady</h5>
-                                  <p class="mb-0">Financial Analyst</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-              </div>
-              <div class="col-4">          
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>“Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis Cum sociis natoque penatibus magnis dis Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae elit libero.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te5.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te5@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Jackie Sanders</h5>
-                                  <p class="mb-0">Investment Planner</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-  
-                  <div class="card-body mb-3">
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <span class="iconify" data-icon="emojione:star"></span>
-                      <blockquote class="icon mt-3">
-                          <p>“Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.”</p>
-                          <div class="blockquote-details d-inline-flex mt-3">
-                              <img class="rounded-circle w-12" src="https://sandbox.elemisthemes.com/assets/img/avatars/te6.jpg" srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te6@2x.jpg 2x" alt="">
-                              <div class="info mt-4 ml-3">
-                                  <h5 class="mb-1">Laura Widerski</h5>
-                                  <p class="mb-0">Sales Specialist</p>
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="wrapper bg-light">
-        <div class="container py-5 mb-5">
-          <div class="row">
-            <div class="col-lg-6 mb-0">
-              <h2 class="fs-16 text-uppercase text-primary mb-4">FAQ</h2>
-              <h3 class="Display-5 mb-4">If you don't see an answer to your question, you can send us an email from our contact form.</h3>
-              <p class="mb-6">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare.</p>
-              <a href="#" class="btn btn-primary rounded-pill">All FAQ</a>
-            </div>
-      
-            <div class="col-lg-6">
-              <div id="accordion-2">
-  
-                <div class="card" id="sol-dd-21">
-                  <div class="card-header" id="headingOne-2">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2">
-                        How do I get my subscription receipt?
-                      </button>
-                    </h5>
-                  </div>
-  
-                  <div id="collapseOne-2" class="collapse show" aria-labelledby="headingOne-2">
-                    <div class="card-body">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="card" id="sol-dd-22">
-                  <div class="card-header" id="headingTwo-2">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo-2" aria-expanded="false" aria-controls="collapseTwo-2">
-                        Are there any discounts for people in need?
-                      </button>
-                    </h5>
-                  </div>
-  
-                  <div id="collapseTwo-2" class="collapse" aria-labelledby="headingTwo-2">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="sol-dd-23">
-                  <div class="card-header" id="headingThree-2">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree-2" aria-expanded="false" aria-controls="collapseThree-2">
-                        Do you offer a free trial edit?
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree-2" class="collapse" aria-labelledby="headingThree-2">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-                <div class="card" id="sol-dd-24">
-                  <div class="card-header" id="headingFour-2">
-                    <h5 class="mb-0">
-                      <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour-2" aria-expanded="false" aria-controls="collapseFour-2">
-                        How do I reset my Account password?
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseFour-2" class="collapse" aria-labelledby="headingFour-2">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>    
-          </div>
-        </div>
-  
-        <div class="overflow-hidden">
-          <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
-              <path fill="currentColor" d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"></path>
-            </svg>
-          </div>
-        </div>
-      </section>
-  
-  
-      <footer class="py-5">
-          <div class="container">
             <div class="row">
-              <div class="col-lg col-xl-10">
-                <h1 class="display-4 text-light pb-5">Join our community by using our services and grow your business.</h1>
-              </div>
-              <div class="col-lg col-xl-2">
-                <a href="#" class="btn btn-primary rounded-pill text-nowrap">Try It For Free</a>
-              </div>
+                <div class="col-lg-4 text-center text-lg-start">
+                    <h2 class="display-5 text-uppercase text-primary my-3">
+                        Company Facts
+                    </h2>
+                    <h3 class="display-5 my-4">We are proud of our design team</h3>
+                    <p class="mb-5">
+                        Just sit back and relax while we take care of your business needs
+                        for you.
+                    </p>
+                </div>
+                <div class="col-lg-8 my-5">
+                    <div class="row align-items-center counter-wrapper text-center">
+                        <div class="col-md-4">
+                            <div class="
+                      icon
+                      btn btn-circle btn-lg 
+                      disabled
+                      mb-4
+                    " id="cmp-f-i">
+                                <span class="iconify" data-icon="uil:presentation-check"></span>
+                            </div>
+                            <h3 class="counter" style="visibility: visible">1000+</h3>
+                            <p>Completed Projects</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="
+                      icon
+                      btn btn-circle btn-lg 
+                      disabled
+                      mb-4
+                    " id="cmp-f-i">
+                                <span class="iconify" data-icon="feather:user-check"></span>
+                            </div>
+                            <h3 class="counter" style="visibility: visible">50K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="
+                      icon
+                      btn btn-circle btn-lg 
+                      disabled
+                      mb-4
+                    " id="cmp-f-i">
+                                <span class="iconify" data-icon="bx:bx-trophy"></span>
+                            </div>
+                            <h3 class="counter" style="visibility: visible">20+</h3>
+                            <p>Awards Won</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-  
+            <div class="row grid-view my-5">
+                <div class="col-md-6 col-xl-3">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <img class="rounded-circle w-15 mb-4"
+                                src="https://sandbox.elemisthemes.com/assets/img/avatars/te1.jpg" srcset="
+                      https://sandbox.elemisthemes.com/assets/img/avatars/te1@2x.jpg 2x
+                    " alt="" />
+                            <h4 class="mb-1">Coriss Ambady</h4>
+                            <div class="mb-2">Financial Analyst</div>
+                            <p class="mb-2">
+                                Fermentum massa justo sit amet risus morbi leo.
+                            </p>
+                            <nav class="nav social mb-0">
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <img class="rounded-circle w-15 mb-4"
+                                src="https://sandbox.elemisthemes.com/assets/img/avatars/te2.jpg" srcset="
+                      https://sandbox.elemisthemes.com/assets/img/avatars/te2@2x.jpg 2x
+                    " alt="" />
+                            <h4 class="mb-1">Cory Zamora</h4>
+                            <div class="mb-2">Marketing Specialist</div>
+                            <p class="mb-2">
+                                Fermentum massa justo sit amet risus morbi leo.
+                            </p>
+                            <nav class="nav social mb-0">
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <img class="rounded-circle w-15 mb-4"
+                                src="https://sandbox.elemisthemes.com/assets/img/avatars/te3.jpg" srcset="
+                      https://sandbox.elemisthemes.com/assets/img/avatars/te3@2x.jpg 2x
+                    " alt="" />
+                            <h4 class="mb-1">Nikolas Brooten</h4>
+                            <div class="mb-2">Sales Manager</div>
+                            <p class="mb-2">
+                                Fermentum massa justo sit amet risus morbi leo.
+                            </p>
+                            <nav class="nav social mb-0">
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <img class="rounded-circle w-15 mb-4"
+                                src="https://sandbox.elemisthemes.com/assets/img/avatars/te4.jpg" srcset="
+                      https://sandbox.elemisthemes.com/assets/img/avatars/te4@2x.jpg 2x
+                    " alt="" />
+                            <h4 class="mb-1">Jackie Sanders</h4>
+                            <div class="meta mb-2">Investment Planner</div>
+                            <p class="mb-2">
+                                Fermentum massa justo sit amet risus morbi leo.
+                            </p>
+                            <nav class="nav social mb-0">
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
+                                <a href="#"><span class="iconify mx-2" data-icon="icon-park:behance"></span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+                    <h2 class="fs-16 text-uppercase text-primary mb-3">
+                        Latest Projects
+                    </h2>
+                    <h3 class="display-5 mb-5">
+                        Check out some of our awesome projects with creative ideas and
+                        great design.
+                    </h3>
+                </div>
+            </div>
+
+            <div class="owl-carousel owl-theme pb-5">
+                <div class="item">
+                    <figure class="rounded mb-5">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp1.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp1@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Cras Fermentum Sem</a>
+                            </h2>
+                            <div class="text-muted">Mobile Design</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <figure class="rounded mb-7">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp2.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp2@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Venenatis Euismod Vehicula</a>
+                            </h2>
+                            <div class="text-muted">Web Design</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure class="rounded mb-7">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp3.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp3@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Tortor Tellus Cursus</a>
+                            </h2>
+                            <div class="text-muted">Stationary</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure class="rounded mb-7">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp4.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp4@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Ridiculus Sem Parturient</a>
+                            </h2>
+                            <div class="text-muted">Web Application</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <figure class="rounded mb-7">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp5.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp5@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Curcus Sollicitudin Adipiscing</a>
+                            </h2>
+                            <div class="text-muted">Web Design</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <figure class="rounded mb-7">
+                        <a href="#"><img src="https://sandbox.elemisthemes.com/assets/img/photos/sp6.jpg" srcset="
+                        https://sandbox.elemisthemes.com/assets/img/photos/sp6@2x.jpg 2x
+                    " alt="" /></a>
+                    </figure>
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="py-1">
+                            <h2 class="display-5">
+                                <a href="#" class="text-dark h5">Venenatis Euismod Vehicula</a>
+                            </h2>
+                            <div class="text-muted">Stationary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="overflow-hidden pt-5">
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="#f7fbfe"
+                        d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper pb-5" style="background-color: #f7fbfe;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2 class="text-uppercase text-primary my-3">Happy Customers</h2>
+                    <h3 class="display-4 mb-5">Don't take our word for it. See what customers are saying about us.</h3>
+                </div>
+            </div>
+
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3" id="testimonial-grid">
+                <div class="col-4">
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id
+                                ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque
+                                penatibus.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te1.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te1@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Coriss Ambady</h5>
+                                    <p class="mb-0">Financial Analyst</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>”Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit
+                                amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis
+                                consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te2.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te2@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Cory Zamora</h5>
+                                    <p class="mb-0">Marketing Specialist</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>“Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.
+                                Cras justo odio dapibus facilisis sociis natoque penatibus. Vivamus sagittis lacus vel
+                                augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur
+                                vestibulum. Donec sed odio dui consectetur adipiscing elit.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te3.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te3@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Nikolas Brooten</h5>
+                                    <p class="mb-0">Sales Manager</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>“Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt
+                                auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at
+                                sapien. Aenean tortor libero condimentum ac laoreet vitae.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te4.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te4@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Coriss Ambady</h5>
+                                    <p class="mb-0">Financial Analyst</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>“Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque
+                                penatibus magnis dis Cum sociis natoque penatibus magnis dis Cum sociis natoque
+                                penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae
+                                elit libero.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te5.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te5@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Jackie Sanders</h5>
+                                    <p class="mb-0">Investment Planner</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+
+                    <div class="card-body mb-3">
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <span class="iconify" data-icon="emojione:star"></span>
+                        <blockquote class="icon mt-3">
+                            <p>“Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra
+                                augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                mus.”</p>
+                            <div class="blockquote-details d-inline-flex mt-3">
+                                <img class="rounded-circle w-12"
+                                    src="https://sandbox.elemisthemes.com/assets/img/avatars/te6.jpg"
+                                    srcset="https://sandbox.elemisthemes.com/assets/img/avatars/te6@2x.jpg 2x" alt="">
+                                <div class="info mt-4 ml-3">
+                                    <h5 class="mb-1">Laura Widerski</h5>
+                                    <p class="mb-0">Sales Specialist</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light">
+        <div class="container py-5 mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-0">
+                    <h2 class="fs-16 text-uppercase text-primary mb-4">FAQ</h2>
+                    <h3 class="Display-5 mb-4">If you don't see an answer to your question, you can send us an email
+                        from our contact form.</h3>
+                    <p class="mb-6">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                        sem nec elit. Nullam quis risus eget urna mollis ornare.</p>
+                    <a href="#" class="btn btn-primary rounded-pill">All FAQ</a>
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="accordion-2">
+
+                        <div class="card" id="sol-dd-21">
+                            <div class="card-header" id="headingOne-2">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-2"
+                                        aria-expanded="true" aria-controls="collapseOne-2">
+                                        How do I get my subscription receipt?
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne-2" class="collapse show" aria-labelledby="headingOne-2">
+                                <div class="card-body">
+                                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                                    fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                                    fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum
+                                    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                    Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="sol-dd-22">
+                            <div class="card-header" id="headingTwo-2">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo-2" aria-expanded="false"
+                                        aria-controls="collapseTwo-2">
+                                        Are there any discounts for people in need?
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseTwo-2" class="collapse" aria-labelledby="headingTwo-2">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="sol-dd-23">
+                            <div class="card-header" id="headingThree-2">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree-2" aria-expanded="false"
+                                        aria-controls="collapseThree-2">
+                                        Do you offer a free trial edit?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree-2" class="collapse" aria-labelledby="headingThree-2">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="sol-dd-24">
+                            <div class="card-header" id="headingFour-2">
+                                <h5 class="mb-0">
+                                    <span class="iconify" data-icon="ls:dropdown" id="sol-dd-btn"></span>
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFour-2" aria-expanded="false"
+                                        aria-controls="collapseFour-2">
+                                        How do I reset my Account password?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour-2" class="collapse" aria-labelledby="headingFour-2">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-hidden">
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                    <path fill="currentColor"
+                        d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg col-xl-10">
+                    <h1 class="display-4 text-light pb-5">Join our community by using our services and grow your
+                        business.</h1>
+                </div>
+                <div class="col-lg col-xl-2">
+                    <a href="#" class="btn btn-primary rounded-pill text-nowrap">Try It For Free</a>
+                </div>
+            </div>
+
             <hr class="py-4">
             <div class="row">
-              <div class="col-md-4 col-lg-3">
-                <div class="widget">
-                  <img class="my-4" src="https://sandbox.elemisthemes.com/assets/img/logo-light.png" srcset="https://sandbox.elemisthemes.com/assets/img/logo-light@2x.png 2x" alt="">
-                  <p class="my-4">© 2021 Sandbox. <br class="d-none d-lg-block">All rights reserved.</p>
-                  <nav class="nav social social-white">
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:dribbble-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:stackoverflow-icon"></span></a>
-                    <a href="#"><span class="iconify mx-2" data-icon="logos:youtube"></span></i></a>
-                  </nav>
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <img class="my-4" src="https://sandbox.elemisthemes.com/assets/img/logo-light.png"
+                            srcset="https://sandbox.elemisthemes.com/assets/img/logo-light@2x.png 2x" alt="">
+                        <p class="my-4">© 2021 Sandbox. <br class="d-none d-lg-block">All rights reserved.</p>
+                        <nav class="nav social social-white">
+                            <a href="#"><span class="iconify mx-2" data-icon="logos:twitter"></span></a>
+                            <a href="#"><span class="iconify mx-2" data-icon="logos:linkedin-icon"></span></a>
+                            <a href="#"><span class="iconify mx-2" data-icon="logos:dribbble-icon"></span></a>
+                            <a href="#"><span class="iconify mx-2" data-icon="logos:stackoverflow-icon"></span></a>
+                            <a href="#"><span class="iconify mx-2" data-icon="logos:youtube"></span></i></a>
+                        </nav>
+                    </div>
                 </div>
-              </div>
-  
-              <div class="col-md-4 col-lg-3">
-                <div class="widget">
-                  <h4 class="widget-title text-white my-4">Get in Touch</h4>
-                  <address class="my-4">Moonshine St. 14/05 Light City, London, United Kingdom</address>
-                  <a href="mailto:#">info@email.com</a><br> +00 (123) 456 78 90
-                </div>
-              </div>
-  
-              <div class="col-md-4 col-lg-3">
-                <div class="widget">
-                  <h4 class="widget-title text-white my-4">Learn More</h4>
-                  <ul class="list-unstyled">
-                    <li><a href="#" >About Us</a></li>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-  
-              <div class="col-md-12 col-lg-3">
-                <div class="widget">
-                  <h4 class="widget-title text-white my-4">Our Newsletter</h4>
-                  <p class="mb-5">Subscribe to our newsletter to get our news &amp; deals delivered to you.</p>
-                  <div class="newsletter-wrapper">
-                    <form action="#">
-                      <div class="input-group form-floating">
-                        <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
-                        <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn btn-primary ">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-  
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-        
-    </body>
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title text-white my-4">Get in Touch</h4>
+                        <address class="my-4">Moonshine St. 14/05 Light City, London, United Kingdom</address>
+                        <a href="mailto:#">info@email.com</a><br> +00 (123) 456 78 90
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title text-white my-4">Learn More</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title text-white my-4">Our Newsletter</h4>
+                        <p class="mb-5">Subscribe to our newsletter to get our news &amp; deals delivered to you.</p>
+                        <div class="newsletter-wrapper">
+                            <form action="#">
+                                <div class="input-group form-floating">
+                                    <input type="email" value="" name="EMAIL" class="required email form-control"
+                                        placeholder="Email Address" id="mce-EMAIL2">
+                                    <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2"
+                                        class="btn btn-primary ">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
 
 </html>
